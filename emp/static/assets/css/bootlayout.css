@@ -1,0 +1,19 @@
+.bg{
+background-color: #e7f3f3;
+margin:0px; 
+}
+.image{
+    width:100px;
+    height:90px;
+}
+.adjust{
+    padding:30px;
+}
+.menu{
+    min-height: 500px;
+}
+.bg1{
+    background-color:#dcf3ec;
+    margin:0px; 
+    margin-top:10px;
+    }

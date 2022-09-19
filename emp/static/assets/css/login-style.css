@@ -1,0 +1,43 @@
+body{
+    background-color:white;
+
+}
+.container{
+    width:400px;
+    height:250px;
+    padding-top: 150px;
+    background-color:lightblue;
+    margin-top:50px;
+    margin-left:402px;
+   text-align: center;
+   box-shadow: 8px 22px 16px 23px rgb(24, 12, 95);
+}
+img{
+    margin-top: -185px;
+    width:110px;
+    height:110px;
+}
+
+input[type="text"]:focus{
+    border-color:darkblue;
+    border-width:1px;
+}
+input[type="password"]:after{
+    border-color:purple;
+}
+.email-field:focus{
+    border-color:purple;
+}
+input{
+    margin-bottom:10px;
+}
+.btn-login{
+cursor:pointer;
+}
+.bgimg{
+    background-image:url("/home/iness/Revathy/img/new.jpeg");
+    background-repeat: repeat-x;
+    background-size:100%,700px;
+}
+
+    

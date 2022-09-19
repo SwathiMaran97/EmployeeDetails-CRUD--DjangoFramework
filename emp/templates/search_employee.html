@@ -1,0 +1,109 @@
+<html>
+
+
+<head>
+    <title>welcome to Employee Details</title>
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
+    <script src="/static/assets/script/jquery.min.js">
+    </script>
+    <script src="/static/assets/script/popper.min.js">
+    </script>
+    <script src="/static/assets/script/bootstrap.min.js">
+    </script>
+    <style>
+        .home {
+            background-color: #00aeff;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light home">
+        <a class="navbar-brand" href="#">
+            <img src="/static/assets/images/Org_Competencies.png" width="50px"> EMPLOYEE DETAILS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+            </ul>
+            <div class="d-flex justify-content-end">
+                <u1 class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/" role="button"><i class="fa fa-home fa-lg"></i>
+                        
+                    </a>
+                    </li>
+                </u1>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" style=height:90%>
+            <div class="col-sm-2 bg-light" style="padding: 10px">
+
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" id="" href="\newemployee">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="\searchemployee">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="\showemployee">Show</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="\uploadfile">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="\profitanalysis">Revenue Analysis</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-10">
+
+                <form name="myform" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Search .." />
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+
+                </form>
+                <div class="row tab-align">
+                    <table class="table " style="color:black;">
+                        <h2>EMPLOYEE DETAILS</h2>
+                        <tr style="color: blue;">
+                            <th>ID</th>
+                            <th>EmployeeCode</th>
+                            <th>Name</th>
+                            <th>EmailId</th>
+                            <th>ContactNo</th>
+
+                        </tr>
+                        {% for employee in data %}
+                        <tr>
+                            <td>{{employee.id}}</td>
+                            <td>{{employee.employee_code}}</td>
+                            <td>{{employee.name}}</a>
+                            </td>
+                            <td>{{employee.email_id}}</td>
+                            <td>{{employee.contact_no}}</td>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
